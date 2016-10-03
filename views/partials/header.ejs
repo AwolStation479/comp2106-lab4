@@ -1,0 +1,34 @@
+<%
+	var family = [[
+	// Paths:
+		'/ron', '/colleen', '/jake', '/nico', '/simon', '/emily', '/lidia'
+	],[
+	// Proper Names:
+		'Ron', 'Colleen', 'Jake', 'Nico', 'Simon', 'Emily', 'Lidia',
+	]];
+%>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel="stylesheet" href='/stylesheets/bootstrap.min.css'>
+    <link rel="stylesheet" href='/stylesheets/bootstrap-theme.min.css'>
+	<title><%= title %></title>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <h3 style="text-align:center;"><a href='/'>The Van Niekerk Family</a></h3>
+	<div style="margin-left:31.5%;">
+		<ul class="nav navbar-nav">
+			<% for(var i = 0; i < family[0].length; i++) { %>
+				<li>
+					<a href=<%= family[0][i] %>>
+						<%= family[1][i] %>
+					</a>
+				</li>
+			<% } %>
+		</ul>
+	</div>
+</nav>
